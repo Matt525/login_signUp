@@ -1,0 +1,13 @@
+.loginButton{
+    display: none;
+    opacity: 0; 
+}
+.signUpButton{
+    display: none;
+    opacity: 0; 
+}
+
+.displayButton{
+    display: inline; 
+    opacity: 1;
+}

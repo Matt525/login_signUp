@@ -1,0 +1,19 @@
+{
+  "name": "login_signup",
+  "version": "1.0.0",
+  "description": "login & Sign Up styled form",
+  "main": "index.js",
+  "scripts": {
+    "test": "someting\u001b[1;d: "
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/Matt525/login_signUp.git"
+  },
+  "keywords": [
+    "login",
+    "signup"
+  ],
+  "author": "Matthew Staton",
+  "license": "MIT"
+}
