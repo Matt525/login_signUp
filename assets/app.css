@@ -11,3 +11,23 @@
     display: inline; 
     opacity: 1;
 }
+
+
+#email_input{
+    height: 30px;
+    width: 300px;
+    margin: 5px;
+    border: solid rgb(190, 190, 190) 2px;
+    border-radius: 5px;
+    outline: none;
+}
+#password_input{
+    height: 30px;
+    width: 300px;
+    margin: 5px;
+    border: solid  rgb(190, 190, 190) 2px;
+    border-radius: 5px;
+    outline: rgb(190, 190, 190); 
+
+
+}
