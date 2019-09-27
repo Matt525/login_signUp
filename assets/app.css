@@ -1,3 +1,10 @@
+body{
+    height: 1000px; 
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
 .loginButton{
     display: none;
     opacity: 0; 
@@ -14,20 +21,56 @@
 
 
 #email_input{
-    height: 30px;
+    height: 35px;
     width: 300px;
-    margin: 5px;
-    border: solid rgb(190, 190, 190) 2px;
+    margin: 20px;
+    border: solid rgba(83, 83, 83, 0.5) 2px;
     border-radius: 5px;
+    /* box-shadow: 1px 1px 1px 1px rgb(189, 189, 189); */
     outline: none;
+    
 }
+
 #password_input{
-    height: 30px;
+    height: 35px;
     width: 300px;
-    margin: 5px;
-    border: solid  rgb(190, 190, 190) 2px;
+    margin: 20px;
+    border: solid rgba(83, 83, 83, 0.5) 2px;
     border-radius: 5px;
-    outline: rgb(190, 190, 190); 
+    /* box-shadow: 1px 1px 1px 1px rgb(189, 189, 189); */
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ 
 
 
+#login_form{
+    height: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+
+header{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 2px;
+    width: 250px;
+    background-color: rgb();
+    
+}
+
+header >  ul > li {
+    float: left;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 20px;
+    margin: 0;
 }

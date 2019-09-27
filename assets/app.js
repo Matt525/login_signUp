@@ -1,5 +1,5 @@
-let login = document.querySelectorAll('#Login');
-let signUp = document.querySelectorAll('#signUp');
+let login = document.getElementById('Login');
+let signUp = document.getElementById('signUp')
 
 
 
