@@ -2,22 +2,39 @@ body{
     height: 1000px; 
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-
+    background: linear-gradient(to right, #6441a5, #2a0845);
+    color: whitesmoke;
+    
 }
 
-.loginButton{
+.loginButton {
     display: none;
-    opacity: 0; 
+    height: 35px;
+    width: 175px;
+    margin: 1.5rem;
+    background: linear-gradient(#E6E6FA, rgb(194, 194, 194),rgb(189, 189, 189),rgb(230,230,250), #dfd0fb);
+    border: rgb(151, 151, 151);
+    border-radius: 10px;
 }
-.signUpButton{
+.signUpButton {
     display: none;
-    opacity: 0; 
+    height: 35px;
+    width: 300px;
+    width: 175px;
+    margin: 1.5rem;
+    background: linear-gradient(#E6E6FA, rgb(194, 194, 194),rgb(189, 189, 189),rgb(230,230,250), #dfd0fb);
+    border: rgb(151, 151, 151);
+    border-radius: 10px;
+}
+
+.signUpInputs{
+    display: none;
 }
 
 .displayButton{
-    display: inline; 
-    opacity: 1;
+    display: block;
 }
+
 
 
 #email_input{
@@ -25,8 +42,7 @@ body{
     width: 300px;
     margin: 20px;
     border: solid rgba(83, 83, 83, 0.5) 2px;
-    border-radius: 5px;
-    /* box-shadow: 1px 1px 1px 1px rgb(189, 189, 189); */
+    border-radius: 10px;
     outline: none;
     
 }
@@ -36,8 +52,9 @@ body{
     width: 300px;
     margin: 20px;
     border: solid rgba(83, 83, 83, 0.5) 2px;
-    border-radius: 5px;
+    border-radius: 10px;
     /* box-shadow: 1px 1px 1px 1px rgb(189, 189, 189); */
+    
 }
 
 ::-webkit-input-placeholder {
@@ -47,13 +64,13 @@ body{
  
 
 
-#login_form{
-    height: 500px; 
+#login_form {
+    height: 600px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     
 }
 
@@ -73,4 +90,6 @@ header >  ul > li {
     overflow: hidden;
     padding: 20px;
     margin: 0;
+    cursor: pointer;
+    color: white;
 }

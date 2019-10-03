@@ -1,19 +1,16 @@
-let login = document.getElementById('Login');
-let signUp = document.getElementById('signUp')
+let loginButton = document.querySelector('.loginButton');
+let signUpButton = document.querySelector('.signUpButton');
+let login = document.getElementById('login');
+let signUp = document.getElementById('sign-up');
 
 
 
-login.addEventListener('click', () => {
-    login.classList.add('.displayButton');
-    signUp.classList.remove('.displayButton'); 
+login.addEventListener('click', ()=>{
+    loginButton.classList.add('displayButton');
+    signUpButton.classList.remove('displayButton');
 });
-
-signUp.addEventListener('click', () => {
-    signUp.classList.add('.displayButton');
-    login.classList.remove('.displayButton'); 
+signUp.addEventListener('click', ()=>{
+    signUpButton.classList.add('displayButton');
+    loginButton.classList.remove('displayButton');
 });
-
-
-
-
 
