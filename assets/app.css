@@ -1,3 +1,4 @@
+
 body{
     height: 1000px; 
     width: 100%;
@@ -7,13 +8,15 @@ body{
     
 }
 
+
+
 .loginButton {
     display: none;
     height: 35px;
     width: 175px;
     margin: 1.5rem;
-    background: linear-gradient(#E6E6FA, rgb(194, 194, 194),rgb(189, 189, 189),rgb(230,230,250), #dfd0fb);
-    border: rgb(151, 151, 151);
+    background: #e6e6fa;
+    border: none;
     border-radius: 10px;
 }
 .signUpButton {
@@ -22,9 +25,9 @@ body{
     width: 300px;
     width: 175px;
     margin: 1.5rem;
-    background: linear-gradient(#E6E6FA, rgb(194, 194, 194),rgb(189, 189, 189),rgb(230,230,250), #dfd0fb);
-    border: rgb(151, 151, 151);
+    border: none;
     border-radius: 10px;
+    background: #E6E6FA;
 }
 
 .signUpInputs{
@@ -53,7 +56,7 @@ body{
     margin: 20px;
     border: solid rgba(83, 83, 83, 0.5) 2px;
     border-radius: 10px;
-    /* box-shadow: 1px 1px 1px 1px rgb(189, 189, 189); */
+    
     
 }
 
@@ -64,7 +67,19 @@ body{
  
 
 
+ /* L o g i n  &  S i g n u p - F o r m s  */
+
 #login_form {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#sign_up_form{
     height: 600px;
     width: 100%;
     display: flex;
