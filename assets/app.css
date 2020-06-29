@@ -1,16 +1,26 @@
 
 body{
-    height: 1000px; 
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, #6441a5, #2a0845);
+
+
+    
+    background: url('/assets/login_background.jpeg');
     color: whitesmoke;
+    font-size: 30px;
+    font-weight: lighter!important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
     
 }
 
+#body-bg{ 
+margin-left: 20%;
 
+}
 
-.loginButton {
+#sign-up{ 
+    font-size: 15px;
+}
+
+/* .loginButton {
     display: none;
     height: 35px;
     width: 175px;
@@ -28,34 +38,34 @@ body{
     border: none;
     border-radius: 10px;
     background: #E6E6FA;
+} */
+
+
+.displayNone { 
+    visibility: hidden;
+    display: none!important;
 }
 
-.signUpInputs{
-    display: none;
+input { 
+    padding-left: 10px;
 }
-
-.displayButton{
-    display: block;
-}
-
-
 
 #email_input{
-    height: 35px;
-    width: 300px;
+    height: 50px;
+    width: 350px;
     margin: 20px;
-    border: solid rgba(83, 83, 83, 0.5) 2px;
-    border-radius: 10px;
+    border: solid rgba(83, 83, 83, 0.733) 2px;
     outline: none;
     
 }
 
 #password_input{
-    height: 35px;
-    width: 300px;
+    height: 50px;
+    width: 350px;
     margin: 20px;
-    border: solid rgba(83, 83, 83, 0.5) 2px;
-    border-radius: 10px;
+    border: solid rgba(83, 83, 83, 0.801) 2px;
+
+    display: block;
     
     
 }
@@ -63,6 +73,10 @@ body{
 ::-webkit-input-placeholder {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    
+    
  }
  
 
@@ -76,6 +90,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     
 }
 
@@ -83,19 +98,20 @@ body{
     height: 600px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    
     align-items: center;
     flex-direction: column;
     
 }
 
 header{ 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
     word-spacing: 2px;
-    width: 250px;
     background-color: rgb();
+    padding: 0!important;
     
 }
 
@@ -103,8 +119,26 @@ header >  ul > li {
     float: left;
     text-decoration: none;
     overflow: hidden;
-    padding: 20px;
-    margin: 0;
     cursor: pointer;
     color: white;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+header > ul { 
+    padding: 5px!important;
+}
+
+.container{ 
+    height: 1000px;
+    width: 1000px;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15%;
+    background: rgba(83, 83, 83, 0.664);
+    padding: 0%;
+    
+
 }

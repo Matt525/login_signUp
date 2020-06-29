@@ -1,18 +1,17 @@
 let loginButton = document.querySelector('.loginButton');
 let signUpButton = document.querySelector('.signUpButton');
-let login = document.getElementById('login');
+let login = document.querySelector("#login");
 let signUp = document.getElementById('sign-up');
 let signUpInputs = document.querySelector('.signUpInputs'); 
-
+let loginForm = document.getElementById('login_form'); 
 
 
 login.addEventListener('click', ()=>{
-    loginButton.classList.add('displayButton');
-    signUpButton.classList.remove('displayButton');
+    console.log("login button clicked.");
 });
+
 signUp.addEventListener('click', ()=>{
-    signUpButton.classList.add('displayButton');
-    loginButton.classList.remove('displayButton');
-    signUpInputs.classList.add('displayButton');
+    console.log("Sign up button clicked."); 
+    
 });
 
