@@ -29,10 +29,14 @@ body{
     color: white;
     letter-spacing: 0.5em;
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 .loginButton:hover { 
-    background: linear-gradient(to bottom, #024e88, #0067b8, #0067b8, #024e88 )
+    /* animation: rotate-center 0.75s ease-in-out; */
+    cursor: pointer;
+
 }
+
 .signUpButton {
     height: 40px;
     width: 200px;
@@ -46,7 +50,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+#signUpLogo { 
+    margin-top: 40px!important;
+    
+}
 .displayNone { 
     visibility: hidden;
     display: none!important;
@@ -55,9 +62,6 @@ body{
 
 input { 
     padding-left: 15px;
-    
-    
-    
 }
 
 #email_input{
@@ -113,7 +117,7 @@ input {
 }
 
 #sign_up_form{
-    height: 600px;
+    height: 700px;
     width: 500px;
     display: flex;
     justify-content: center;
@@ -161,3 +165,6 @@ header{
     
 
 }
+
+    @-webkit-keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+

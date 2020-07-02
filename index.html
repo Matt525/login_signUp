@@ -56,8 +56,9 @@
                     
                     <div class="signUpInputs" style="display: flex; flex-direction: column;">
                             <input id="email_input" type="name" inputmode="email" placeholder="First Name" required>
-                            <input id="email_input" type="name" name="last_input" inputmode="email" placeholder="Last Name" required>
-                            <input id="email_input" type="name" name="last_input" inputmode="email" placeholder="Email" required>
+                            <input id="email_input" type="name" name="last_input" placeholder="Last Name" required>
+                            <input id="email_input" type="email" name="last_input" inputmode="Email" placeholder="Email" required>
+                            <input id="email_input" type="password" name="last_input" placeholder="Password" required>
                     </div>
                     <button type="submit" class="signUpButton">Sign Up</button>
                     <p id="login">Have an account? <boldk>Login here</bold>.</p>
@@ -105,8 +106,7 @@
                     handleLoginSubmit = () =>{
                         loginLogo.classList.add('fa-user-check');
                         loginLogo.classList.remove('fa-users');
-                        
-
+                        loginLogo.style.color = "green";
                     }
 
                
