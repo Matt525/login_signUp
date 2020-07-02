@@ -1,11 +1,13 @@
 
 body{
     height: 100vh!important;
-    background: url('/assets/login_background.jpeg');
+    background: url('/assets/blurredWhite.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: whitesmoke;
     font-size: 30px;
     font-weight: lighter!important;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: flex-start!important;
@@ -20,18 +22,23 @@ body{
     height: 40px;
     width: 200px;
     margin: 1.5rem;
-    background: linear-gradient(to bottom, #5785d0, #498CF7, #477dd3);
+    /* background: linear-gradient(to bottom, #5785d0, #498CF7, #477dd3); */
+    background: #0067b8;
     border: none;
     outline: none;
     color: white;
     letter-spacing: 0.5em;
     font-family: Arial, Helvetica, sans-serif;
 }
+.loginButton:hover { 
+    background: linear-gradient(to bottom, #024e88, #0067b8, #0067b8, #024e88 )
+}
 .signUpButton {
     height: 40px;
     width: 200px;
     margin: 1.5rem;
-    background: linear-gradient(to bottom, #5785d0, #498CF7, #477dd3);
+    /* background: linear-gradient(to bottom, #5785d0, #498CF7, #477dd3); */
+    background: #0067b8;
     border: none;
     outline: none;
     color: white;
@@ -135,15 +142,6 @@ header{
     
 }
 
-header >  ul > li {
-    float: left;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
-    color: black;
-    justify-content: center;
-    text-decoration: underline;
-}
 
 .fas { 
     padding-bottom: 3rem!important;

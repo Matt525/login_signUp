@@ -22,10 +22,10 @@
     <!-- L O G I N - F O R M  -->
 
     
-    <form id="login_form" action="#" method="POST">
+    <form onsubmit="handleLoginSubmit()" id="login_form" action="#" method="POST">
         
         <header>
-            <i class="fas fa-2x fa-user-tie"></i>
+            <i id="loginLogo" class="fas fa-2x fa-users"></i>
         </header>
     
             <div class="line1">
@@ -50,7 +50,7 @@
 
                 <form id="sign_up_form" action="/" method="POST">
                     <header>
-                        <i class="fas fa-2x fa-user-plus"></i>
+                        <i id="signUpLogo" class="fas fa-2x fa-user-plus"></i>
                     </header>
                     
                     
@@ -70,18 +70,21 @@
 
 
 
-            <script src="./assets/app.js"></script>
+                <!--  J A V A S C R I P T  -->
+
+
 
 
                 <script>
                     // Variable declarations
-                    let loginButton = document.querySelector('.loginButton');
-                    let signUpButton = document.querySelector('.signUpButton');
-                    let login = document.getElementById('login');
-                    let signUp = document.getElementById('sign-up');
-                    let signUpInputs = document.querySelector('.signUpInputs');
-                    let loginForm = document.getElementById('login_form');
-                    let signUpForm = document.getElementById('sign_up_form')
+                    const loginButton = document.querySelector('.loginButton');
+                    const signUpButton = document.querySelector('.signUpButton');
+                    const login = document.getElementById('login');
+                    const signUp = document.getElementById('sign-up');
+                    const signUpInputs = document.querySelector('.signUpInputs');
+                    const loginForm = document.getElementById('login_form');
+                    const signUpForm = document.getElementById('sign_up_form')
+                    const loginLogo = document.getElementById('loginLogo');
                     // Hiding one of the forms upon app load in.
                     window.onload = ()=>{
                         signUpForm.classList.add('displayNone');
@@ -99,9 +102,22 @@
                         signUpForm.classList.toggle('displayNone');
                     });
                     
+                    handleLoginSubmit = () =>{
+                        loginLogo.classList.add('fa-user-check');
+                        loginLogo.classList.remove('fa-users');
+                        
+
+                    }
+
                
                 </script>  
+             
+             
+
                 
+
+
+
                 
                 <!-- The core Firebase JS SDK is always required and must be listed first -->
 
@@ -111,12 +127,18 @@
                 <!-- TODO: Add SDKs for Firebase products that you want to use
                     https://firebase.google.com/docs/web/setup#available-libraries -->
                 <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
-
+                    
+                
+                
+                
                 <script>
                 
+                require('dotenv').config()
+                const APIKEY = process.env.USER_KEY;
+
                 // Your web app's Firebase configuration
                 var firebaseConfig = {
-                    apiKey: "",
+                    apiKey: APIKEY,
                     authDomain: "login-authentication-d517b.firebaseapp.com",
                     databaseURL: "https://login-authentication-d517b.firebaseio.com",
                     projectId: "login-authentication-d517b",
@@ -129,6 +151,8 @@
                 firebase.initializeApp(firebaseConfig);
                 firebase.analytics();
                 </script>
+
+
 
 </body>
 </html>
