@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/assets/app.css">
     <script src="https://kit.fontawesome.com/145c9296c6.js" crossorigin="anonymous"></script>
-    
+    <script src="./app.js"></script>
 
     <title>Document</title>
 
@@ -71,7 +71,7 @@
 
 
 
-                <!--  J A V A S C R I P T  -->
+                <!--  J A V A S C R I P T - Click Events & Submition functions -->
 
 
 
@@ -107,50 +107,20 @@
                         loginLogo.classList.add('fa-user-check');
                         loginLogo.classList.remove('fa-users');
                         loginLogo.style.color = "green";
+                        const formData = new FormData(loginForm);
+                        console.log(formData);
+
+
                     }
 
                
                 </script>  
-             
-             
-
-                
 
 
+            
 
-                
-                <!-- The core Firebase JS SDK is always required and must be listed first -->
 
-                
-                <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
 
-                <!-- TODO: Add SDKs for Firebase products that you want to use
-                    https://firebase.google.com/docs/web/setup#available-libraries -->
-                <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
-                    
-                
-                
-                
-                <script>
-                
-                require('dotenv').config()
-                const APIKEY = process.env.USER_KEY;
-
-                // Your web app's Firebase configuration
-                var firebaseConfig = {
-                    apiKey: APIKEY,
-                    authDomain: "login-authentication-d517b.firebaseapp.com",
-                    databaseURL: "https://login-authentication-d517b.firebaseio.com",
-                    projectId: "login-authentication-d517b",
-                    storageBucket: "login-authentication-d517b.appspot.com",
-                    messagingSenderId: "1051001711710",
-                    appId: "1:1051001711710:web:6ec93907431013465f18cf",
-                    measurementId: "G-QXV42JJVEL"
-                };
-                // Initialize Firebase
-                firebase.initializeApp(firebaseConfig);
-                firebase.analytics();
-                </script>
 
 
 
