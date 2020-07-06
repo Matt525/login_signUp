@@ -20,9 +20,5 @@
         // Initialize Firebase
             firebase.initializeApp(firebaseConfig); 
             firebase.analytics();
-        
-            let loginForm = document.getElementById('login_form');
-            const formData = new FormData(loginForm);
-            console.log(formData);
 
 

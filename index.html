@@ -16,14 +16,12 @@
 
     
     <div class="container">
-    
-
 
 
     <!-- L O G I N - F O R M  -->
 
     
-    <form onsubmit="handleLoginSubmit()" id="login_form" action="#" method="POST">
+    <form onsubmit="sendEmailVerification()" id="login_form" action="/" method="POST">
         
         <header>
             <i id="loginLogo" class="fas fa-2x fa-users"></i>
@@ -37,7 +35,7 @@
                     <input style="font-size: large;" id="password_input" type="password" placeholder="Password" required>
             </div>
 
-                <button type="submit" onclick="signInViaGoogle()" class="loginButton">Login</button>
+                <button type="submit" class="loginButton">Login</button>
 
            
                         <p id="sign-up">Don't have an account? Sign up here.</p>
@@ -56,13 +54,13 @@
                     
                     
                     <div class="signUpInputs" style="display: flex; flex-direction: column;">
-                            <input id="email_input" type="name" inputmode="email" placeholder="First Name" required>
-                            <input id="email_input" type="name" name="last_input" placeholder="Last Name" required>
+                            <input id="first_input" type="name" inputmode="email" placeholder="First Name" required>
+                            <input id="last_input" type="name" name="last_input" placeholder="Last Name" required>
                             <input id="email_input" type="email" name="last_input" inputmode="Email" placeholder="Email" required>
-                            <input id="email_input" type="password" name="last_input" placeholder="Password" required>
+                            <input id="password_input" type="password" name="last_input" placeholder="Password" required>
                     </div>
                     <button type="submit" class="signUpButton">Sign Up</button>
-                    <p id="login">Have an account? <boldk>Login here</bold>.</p>
+                    <p id="login">Have an account? <bold>Login here</bold>.</p>
                 </form>
                 
 
@@ -72,7 +70,7 @@
 
 
 
-                <!--  J A V A S C R I P T - Click Events & Submition functions -->
+                <!--  J A V A S C R I P T - Click Events & submission functions -->
 
 
 
@@ -87,6 +85,9 @@
                     const loginForm = document.getElementById('login_form');
                     const signUpForm = document.getElementById('sign_up_form')
                     const loginLogo = document.getElementById('loginLogo');
+                    let email = document.getElementById('email_input').value; 
+                    let password = document.getElementById('password_input').value;
+                    
                     // Hiding one of the forms upon app load in.
                     window.onload = ()=>{
                         signUpForm.classList.add('displayNone');
@@ -104,35 +105,54 @@
                         signUpForm.classList.toggle('displayNone');
                     });
                     
+
+
+
                     handleLoginSubmit = () =>{
-                        // Logo change upon submition
-                        loginLogo.classList.add('fa-user-check');
-                        loginLogo.classList.remove('fa-users');
-                        loginLogo.style.color = "green";
-                        // firebase handling
                         
+                        
+                    
+                                // Logo change upon submission
+                            loginLogo.classList.add('fa-user-check');
+                            loginLogo.classList.remove('fa-users');
+                            loginLogo.style.color = "green";
 
 
+                        
+                                                }
+                                                
+                                                    
+                                // firebase handling
 
-                    }
+                                firebase.auth().signInWithEmailAndPassword(email,password).catch(error=>{
+                                let errorCode = error.code; 
+                                let errorMessage = error.message;
+                            
+                            })
 
-                    handleSigninSubmit = () =>{
-                        // sign in handling code here.
-                    }
-               
+
+                            sendEmailVerification = () =>{
+                                firebase.auth().currentUser.sendEmailVerification().then(()=>{
+                                    alert("Email verification has been sent to the user."); 
+                                })
+                            }
+
+ 
+
                 </script>  
 
+                
+
 
             
 
             
+                <!-- The core Firebase JS SDK is always required and must be listed first -->
+                <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
 
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+                <!-- TODO: Add SDKs for Firebase products that you want to use
+                    https://firebase.google.com/docs/web/setup#available-libraries -->
+                <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
-    
 </body>
 </html>
